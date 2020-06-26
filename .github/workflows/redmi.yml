@@ -75,10 +75,9 @@ jobs:
         env:
           CONFIG_FILE: 'redmi_ac2100.config'
         run: |
-          cd lede
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE ./.config
-          sed -i 's/^[ \t]*//g' ./.config
-          make defconfig
+          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE lede/.config
+          sed -i 's/^[ \t]*//g' lede/.config
+          cd lede && make defconfig
           cat .config
 
       - name: Make download
