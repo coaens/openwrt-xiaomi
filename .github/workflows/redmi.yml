@@ -104,8 +104,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt_REDMI
+          name: OpenWrt_REDMI_Targets
           path: ./lede/bin/targets/
+
+      - name: Upload Packages
+        uses: actions/upload-artifact@master
+        with:
+          name: OpenWrt_REDMI_Packages
+          path: ./lede/bin/packages/
 
       - name: Create release
         if: github.event == 'push'
