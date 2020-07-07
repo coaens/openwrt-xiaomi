@@ -13,8 +13,10 @@ on:
 #  push:
 #    branches: 
 #      - master
-  watch:
-    types: started
+#  watch:
+#    types: started
+  issues:
+    types: edited
 
 env:
  SSH_ACTIONS: false
@@ -47,7 +49,7 @@ jobs:
 
       - name: Clone Lean's OpenWrt
         run: |
-          git clone https://github.com/coolsnowwolf/lede
+          git clone https://github.com/coolsnowwolf/openwrt.git lede
 
       - name: Git Third Party Plugin
         run: |
