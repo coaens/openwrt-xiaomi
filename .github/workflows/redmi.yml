@@ -78,6 +78,9 @@ jobs:
         run: |
           [ -e $CONFIG_FILE ] && mv $CONFIG_FILE lede/.config
           sed -i 's/^[ \t]*//g' lede/.config
+          
+          chmod +x ./redmi_diy.sh && ./redmi_diy.sh
+          
           cd lede && cat .config
           make defconfig
 
