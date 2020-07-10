@@ -16,7 +16,7 @@ on:
 #  watch:
 #    types: started
   issues:
-    types: edited
+    types: closed
 
 env:
  SSH_ACTIONS: false
