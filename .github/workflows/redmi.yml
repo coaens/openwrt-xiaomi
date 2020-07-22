@@ -62,9 +62,7 @@ jobs:
       - name: Update feeds
         run: |
           cd lede
-          sed -i 's/^PKG_VERSION:=.*$/PKG_VERSION:=1.15.1/g' package/lean/trojan/Makefile
-          sed -i 's/^PKG_SOURCE_VERSION:=.*$/PKG_SOURCE_VERSION:=0bad2988c60200c15786baf6b9ea42d66ba2109c/g' package/lean/trojan/Makefile
-          
+                    
           sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
