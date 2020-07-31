@@ -30,9 +30,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: master
+        uses: actions/checkout@main
 
       - name: Space cleanup
         env:
@@ -69,7 +67,7 @@ jobs:
           ./scripts/feeds install -a
 
       - name: SSH connection to Actions
-        uses: P3TERX/debugger-action@master
+        uses: P3TERX/debugger-action@main
         if: env.SSH_ACTIONS == 'true'
 
       - name: Generate Configuration_Redmi_AC2100
@@ -107,13 +105,13 @@ jobs:
         run: find ./lede/bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@main
         with:
           name: OpenWrt_REDMI_Targets
           path: ./lede/bin/targets/
 
       - name: Upload Packages
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@main
         with:
           name: OpenWrt_REDMI_Packages
           path: ./lede/bin/packages/
