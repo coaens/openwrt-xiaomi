@@ -13,12 +13,12 @@ on:
 #  push:
 #    branches: 
 #      - master
-  schedule:
-    - cron: 0 20 * * 0
+#  schedule:
+#    - cron: 0 20 * * 0
 #  watch:
 #    types: started
-  issues:
-    types: closed
+#  issues:
+#    types: closed
 
 env:
  TZ: Asia/Shanghai
