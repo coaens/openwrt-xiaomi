@@ -60,8 +60,7 @@ jobs:
         run: |
           cd lede/package
           git clone https://github.com/fw876/helloworld.git
-          git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
-
+          
       - name: Update feeds
         run: |
           cd lede
